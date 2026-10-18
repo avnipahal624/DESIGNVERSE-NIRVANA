@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Bodoni Moda", Georgia, serif;
+  --font-display: "Cinzel", "Syne", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  
+  --color-oxblood: #4A0E17;
+  --color-oxblood-dark: #30080E;
+  --color-oxblood-light: #721724;
+  --color-oxblood-accent: #8A1829;
+  --color-gilded: #D4AF37;
+  --color-parchment-50: #FAF8F5;
+  --color-parchment-100: #F5F2EB;
+  --color-parchment-200: #EDE7DC;
+  --color-parchment-300: #E2D9C8;
+  --color-parchment-400: #CFC2AC;
+  --color-parchment-muted: #8E8271;
+  --color-ink: #14110F;
+  --color-charcoal: #292725;
+  --color-stone: #B7AA96;
+  --color-silver: #B9B5AE;
+}
+
+/* Custom styling for tactile editorial physics */
+body {
+  background-color: #0D0B0A;
+  color: #EDE7DC;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Architectural light shaft effect */
+.light-shaft {
+  background: radial-gradient(ellipse 60% 80% at 50% -20%, rgba(242, 237, 227, 0.12), rgba(183, 170, 150, 0.02) 60%, transparent 80%);
+}
+
+/* Editorial fine grid lines */
+.bg-grid-ruled {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(142, 130, 113, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(142, 130, 113, 0.08) 1px, transparent 1px);
+}
+
+/* 3D Perspective Book Container */
+.perspective-book {
+  perspective: 2000px;
+}
+
+.book-container {
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-cover-left {
+  transform-origin: left center;
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.book-opened .book-cover-left {
+  transform: rotateY(-140deg);
+}
+
+/* Fine editorial hairline rules */
+.hairline-b { border-bottom: 1px solid rgba(183, 170, 150, 0.22); }
+.hairline-t { border-top: 1px solid rgba(183, 170, 150, 0.22); }
+.hairline-r { border-right: 1px solid rgba(183, 170, 150, 0.22); }
+.hairline-l { border-left: 1px solid rgba(183, 170, 150, 0.22); }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0B0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #30080E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #721724;
+}
